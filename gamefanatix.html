@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Game Fanatix</title>
+	<style>
+		h1.header {font-size: 54px; color: violet}
+		#firstheader {color: blue; z-index:2; position: absolute; top:10px; left: 2px;}
+		#secondheader {color: gray; z-index:1; position: relative; top:12px}
+
+		.listed{font-size:36px;}
+		.header2 {color: orange; z-index:1; position: relative;}
+
+	</style>
+
+	<script>
+			let images= ["Bac.webp","Unc.webp", "Spi.jpeg", "Rac.webp"];
+			let links = ["https://youtu.be/vYdACm1xEOY",
+					  "https://youtu.be/Sy7egE6CcVs",
+					  "https://youtu.be/NTunTURbyUU",
+					  "https://youtu.be/55PRv_e00wc"];
+			var link =links[0];
+
+			function shuffle(number){
+				document.getElementById("flip").src=images[number];
+				link = links[number];
+
+			}
+
+	</script>
+	</head>
+
+	<body background="Bac.webp">
+		<h1 class="header" id="firstheader">Gamefanatic</h1>
+		<h1 class="header" id="secondheader">Gamefanatic</h1>
+		<br>
+	
+	<span class="listed">	
+		My favorites include:<br>
+
+		<a href="#" onclick="shuffle(0);">Batman Arkham</a> <br>
+		<a href="#" onclick="shuffle(1);">Uncharted </a><br>
+		<a href="#" onclick="shuffle(2);">Spider-man</a><br>
+	 	<a href="#" onclick="shuffle(3);">Ratchet & Clank</a> </p>
+	</span>	
+
+		<a name="linker" onclick="window.open(link);"><img id="flip" src="Bac.webp" height=512 width=512></img></a>
+	
+		
+	</body>
+
+</html>
